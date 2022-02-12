@@ -121,7 +121,74 @@ ul {
 /*----------------------------------------------------------
  19 = header 
  --------------------------------------------------*/
+.header {
+  border-bottom: 1px solid var(--border-color-2);
+}
+.header-logo a {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--black-70);
+  transition: 0.3s;
+}
+.header-logo span {
+  color: var(--main-color);
+}
+.header .menu-item {
+  display: inline-block;
+  margin-left: 40px;
+  position: relative;
+}
+.header .menu-item > a {
+  font-weight: 400;
+  text-transform: capitalize;
+  padding: 20px 0;
+  display: block;
+  color: var(--black-90);
+  transition: color 0.3s ease;
+}
+.header .sub-menu a:hover,
+.header .menu-item:hover > a {
+  color: var(--main-color);
+}
+.header .menu-item i {
+  font-size: 13px;
+  margin-left: 3px;
+  pointer-events: none;
+}
+.header .sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--white);
+  padding: 10px 0;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+  transform: translateY(15px);
+  width: 210px;
+  visibility: hidden;
+  opacity: 0;
+}
+@media (min-width: 992px) {
+  .header .menu-item:hover .sub-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.header .sub-menu a {
+  display: block;
+  color: var(--black-90);
+  padding: 10px 20px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
 
+.header-hamburger-btn,
+.header-close-btn,
+.header-backdrop {
+  display: none;
+}
 /*------------------------------------------------------- 
 20 = footer
 ----------------------------------------------------------- */
