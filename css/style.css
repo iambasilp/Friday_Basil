@@ -87,7 +87,14 @@ h3{
 /* ----------------------------------------------
 07 = animation keyframes
 ------------------------------------------------- */
-
+@keyframes spin {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
 /*--------------------------------------------------
  08 = section - padding , title
  -------------------------------------------------- */
@@ -370,7 +377,110 @@ h3{
 /* -----------------------------------------------------------------
 24 = testimonials section 
 ----------------------------------------------------------------------*/
-
+.testimonials-section .img-box{
+  height: 150px;
+  width: 150px;
+  background-color: var(--red-light);
+  margin: 30px auto 50px;
+}
+.testimonials-section .img-box::before,
+.testimonials-section .img-box::after{
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid var(--red-light);
+  animation: spin 15s linear infinite;
+}
+.testimonials-section .img-box::before{
+  height: 180px;
+  width: 180px;
+  left: -15px;
+  top: -15px;
+  border-left: 1px solid transparent;
+}
+.testimonials-section .img-box::after{
+  height: 210px;
+  width: 210px;
+  left: -30px;
+  top: -30px;
+  border-left: 1px solid transparent;
+}
+.testimonials-item h3{
+  text-transform: capitalize;
+}
+.testimonials-item .text-2{
+  margin: 0;
+  text-transform: capitalize;
+}
+.testimonials-section .carousel-control-prev,
+.testimonials-section .carousel-control-next{
+  position: relative;
+  height: 35px;
+  width: 35px;
+  background-color: var(--main-color);
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+.testimonials-section .decoration-circles-item{
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+.testimonials-section .decoration-circles-item:nth-child(1){
+  left: 10%;
+  top: 20%;
+  height: 30px;
+  width: 30px;
+  background-color: var(--yellow-light);
+}
+.testimonials-section .decoration-circles-item:nth-child(2){
+  left: 40%;
+  top: 40%;
+  height: 50px;
+  width: 50px;
+  background-color: var(--green-light);
+}
+.testimonials-section .decoration-circles-item:nth-child(3){
+  left: 70%;
+  top: 70%;
+  height: 30px;
+  width: 30px;
+  background-color: var(--red-light);
+}
+.testimonials-section .decoration-circles-item:nth-child(4){
+  left: 20%;
+  top: 50%;
+  height: 20px;
+  width: 20px;
+  background-color: var(--red-light);
+}
+.testimonials-section .decoration-imgs-item{
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+.testimonials-section .decoration-imgs-item:nth-child(1){
+  height: 60px;
+  width: 60px;
+  left: 20%;
+  top: 30%;
+  background-color: var(--yellow-light);
+}
+.testimonials-section .decoration-imgs-item:nth-child(2){
+  height: 80px;
+  width: 80px;
+  left: 90%;
+  top: 40%;
+  background-color: var(--red-light);
+}
+.testimonials-section .decoration-imgs-item:nth-child(3){
+  height: 40px;
+  width: 40px;
+  left: 10%;
+  top: 60%;
+  background-color: var(--green-light);
+}
 /*--------------------------------------------------------------------
  25 = bai section 
  --------------------------------------------------------------------*/
